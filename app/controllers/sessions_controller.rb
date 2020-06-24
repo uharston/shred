@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
     get '/login' do
         if logged_in?
-            redirect '/'
+            redirect '/skate_spots'
         else
             erb :'/sessions/login.html'
         end 
@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
         user = User.find_by(username: params[:username])
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id 
-            redirect to "/"
+            redirect to "/skate_spots"
         else 
             redirect to '/login'
         end

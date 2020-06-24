@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   get '/signup' do 
     if logged_in? 
-      redirect '/'
+      redirect '/skate_spots'
     else
       erb :'/users/signup.html'
     end
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     else 
       user = User.create(params)
       session[:user_id] = user.id 
-      redirect to '/'
+      redirect to '/skatespots'
     end 
   end 
 
