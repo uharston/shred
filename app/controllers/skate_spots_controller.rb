@@ -32,7 +32,12 @@ class SkateSpotsController < ApplicationController
 
   # GET: /users/5
   get "/skate_spots/:id" do
-    erb :"/skate_spots/show.html"
+    if logged_in?
+        @skate_spot = SkateSpot.find_by_id(params[:id])
+        erb :"/skate_spots/show.html"
+    else 
+        redirect '/login'
+    end 
   end
 
   # GET: /users/5/edit

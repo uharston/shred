@@ -6,7 +6,7 @@
 <%@skate_spots.each do |spot| %>
     <br>
     <a href='/skate_spots/<%=spot.id%>'><h3><%= spot.name%></h3></a>
-    <%binding.pry %>
+
     <p>
     <%= spot.location%><br>
     <%= spot.heat_index%><br>
