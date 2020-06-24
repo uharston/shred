@@ -2,6 +2,7 @@ class SkateSpotsController < ApplicationController
 
     get '/skate_spots' do
         if logged_in?
+            @current_user = current_user 
             @skate_spots = SkateSpot.all 
             erb :'/skate_spots/index.html'
         else
@@ -28,5 +29,25 @@ class SkateSpotsController < ApplicationController
             redirect '/login'
         end 
     end 
+
+  # GET: /users/5
+  get "/skate_spots/:id" do
+    erb :"/skate_spots/show.html"
+  end
+
+  # GET: /users/5/edit
+  get "/skate_spots/:id/edit" do
+    erb :"/skate_spots/edit.html"
+  end
+
+  # PATCH: /users/5
+  patch "/skate_spots/:id" do
+    redirect "/skate_spots/:id"
+  end
+
+  # DELETE: /users/5/delete
+  delete "/skate_spots/:id/delete" do
+    redirect "/skate_spots"
+  end
 
 end 

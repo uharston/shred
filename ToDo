@@ -1,7 +1,7 @@
 MVP
--> A user is able to log in and out X
--> A user is able to see all of the skatespots from all the users on the index page 
--> A user is able to create a skatespot 
+X-> A user is able to log in and out 
+X-> A user is able to see all of the skatespots from all the users on the index page X 
+X-> A user is able to create a skatespot 
 -> A user is able to update their skatespots 
 -> A user is able to delete their skatespots 
 

@@ -1,1 +1,14 @@
 <h1>This is the Model's index page.</h1>
+
+
+
+
+<%@current_user.skate_spots.each do |spot| %>
+    <br>
+    <p><%= spot.name%><br>
+    <%= spot.location%><br>
+    <%= spot.heat_index%><br>
+    <%= spot.skill_level%><br>
+    <%= spot.description%></p>
+    <hr>
+<% end %>

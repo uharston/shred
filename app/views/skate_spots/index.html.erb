@@ -1,13 +1,20 @@
 <h1>Skate Spots Index</h1>
 
 <a href='/skate_spots/new'>Add spot</a>
+
 <br><br><hr>
 <%@skate_spots.each do |spot| %>
     <br>
-    <p><%= spot.name%><br>
+    <a href='/skate_spots/<%=spot.id%>'><h3><%= spot.name%></h3></a>
+    <%binding.pry %>
+    <p>
     <%= spot.location%><br>
     <%= spot.heat_index%><br>
     <%= spot.skill_level%><br>
     <%= spot.description%></p>
-    
+
+    <hr>
 <% end %>
+<br>
+
+<a href="/logout">Log Out</a>
