@@ -1,2 +1,2 @@
 # shred
-An application that connects skater to local skate spots 
+An application that connects skaters to local skate spots 
