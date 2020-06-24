@@ -8,4 +8,12 @@ class SkateSpots < ApplicationController
         end
     end 
 
+    get '/skate_spots/new' do 
+        if logged_in? 
+            erb :'/skate_spots/new.html'
+        else 
+            redirect '/'
+        end 
+    end 
+
 end 
