@@ -16,4 +16,11 @@ class SkateSpots < ApplicationController
         end 
     end 
 
+    post '/skate_spots' do 
+        binding.pry 
+        if logged_in? 
+
+        end 
+    end 
+
 end 
