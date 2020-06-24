@@ -1,4 +1,4 @@
-class SkateSpots < ApplicationController
+class SkateSpotsController < ApplicationController
 
     get '/skate_spots' do
         if logged_in?
@@ -19,7 +19,13 @@ class SkateSpots < ApplicationController
     post '/skate_spots' do 
         binding.pry 
         if logged_in? 
-
+            @skate_spot = current_user.skate_spots.build(params)
+            if @skate_spot.save 
+                redirect '/skate_spots'
+            else
+                redirect '/'
+            end
+            redirect '/login'
         end 
     end 
 

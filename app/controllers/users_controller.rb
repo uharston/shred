@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     else 
       user = User.create(params)
       session[:user_id] = user.id 
-      redirect to '/skatespots'
+      redirect to '/skate_spots'
     end 
   end 
 
