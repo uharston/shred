@@ -1,4 +1,12 @@
 <h1>Show Page</h1>
+   <%if @skate_spot.user == current_user %>
+        <form method="post" action="/skate_spots/<%=@skate_spot.id%>/delete">
+            <input id="hidden" type="hidden" name="_method" value="DELETE">
+             <input type="submit" value="Delete">
+        </form>
+        <a href="/skate_spots/<%=@skate_spot.id%>/edit">Update</a>
+        <br><br>
+    <%end%>
 
     <hr><br>
     <strong><%= @skate_spot.name%></strong>
@@ -8,4 +16,10 @@
     <%= @skate_spot.skill_level%><br>
     <%= @skate_spot.description%></p>
 
+ 
+
     <hr>
+    <br>
+
+<a href="/logout">Log Out</a>
+

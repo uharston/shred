@@ -2,10 +2,13 @@ MVP
 X-> A user is able to log in and out 
 X-> A user is able to see all of the skatespots from all the users on the index page X 
 X-> A user is able to create a skatespot 
--> A user is able to update their skatespots 
+X-> A user is able to see an individual spot 
+X-> A user is able to update their skatespots 
 -> A user is able to delete their skatespots 
 
 2nd Level - Functionality
+-> A user is able to browse skatespots for just their city 
+-> A user is able to add a picture of their skate spot 
 -> A user is able to share a skate spot 
 -> A user is able to like another users skatespot or verify that it is good
 -> A user is able to comment on a skatespot 
@@ -15,10 +18,12 @@ X-> A user is able to create a skatespot
 -> Add CSS - Use Template 
 
 4th Level - Expand
--> A user is able to browse local skateshops 
--> A user is able to to see the latest Thrasher Videos - Use a Scraper Class 
+-> A user is able to browse local skateshops locations 
+-> A user is able to to see the latest Thrasher Videos - Use a Scraper Class
+
+Question for Jenn 
+-> Feedback on how file structure and RESTFUL routes 
+-> Ask about 2nd Level features 
+-> How to add Google Maps? 
 
 
-
-Bugs 
-1. password attr is undefined

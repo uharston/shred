@@ -16,7 +16,7 @@ class SkateSpotsController < ApplicationController
         else 
             redirect '/'
         end 
-    end 
+    end
 
     post '/skate_spots' do 
         if logged_in? 
@@ -34,25 +34,58 @@ class SkateSpotsController < ApplicationController
   get "/skate_spots/:id" do
     if logged_in?
         @skate_spot = SkateSpot.find_by_id(params[:id])
-        erb :"/skate_spots/show.html"
+        if @skate_spot 
+            erb :"/skate_spots/show.html"
+        else 
+            redirect '/skate_spots'
+        end
     else 
         redirect '/login'
     end 
   end
 
   # GET: /users/5/edit
+
+
+
   get "/skate_spots/:id/edit" do
-    erb :"/skate_spots/edit.html"
+    if logged_in?
+        @skate_spot = SkateSpot.find_by_id(params[:id])
+        if @skate_spot && @skate_spot.user == current_user 
+            erb :"/skate_spots/edit.html"
+         else 
+             redirect '/skate_spots'
+         end 
+    else 
+        redirect '/login'
+    end 
   end
 
   # PATCH: /users/5
   patch "/skate_spots/:id" do
-    redirect "/skate_spots/:id"
+    if logged_in? 
+        @skate_spot = SkateSpot.find_by_id(params[:id])
+        if @skate_spot && @skate_spot.user == current_user 
+            @skate_spot.update(name: params[:name], location: params[:location], heat_index: params[:heat_index], skill_level: params[:skill_level], description: params[:description])
+          redirect "/skate_spots/#{params[:id]}"
+        else
+          redirect "/skate_spots/#{params[:id]}"  
+        end
+    end 
+    redirect "/skate_spots/#{params[:id]}" 
   end
 
   # DELETE: /users/5/delete
-  delete "/skate_spots/:id/delete" do
-    redirect "/skate_spots"
+  delete '/skate_spots/:id/delete' do
+    if logged_in?
+      @skate_spot = SkateSpot.find_by_id(params[:id])
+      if @skate_spot && @skate_spot.user == current_user
+        @skate_spot.delete
+      end
+      redirect to '/skate_spots'
+    else
+      redirect to '/login'
+    end
   end
 
 end 

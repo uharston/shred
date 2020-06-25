@@ -1,0 +1,11 @@
+<h1>Edit Skate Spot</h1>
+
+<form method="post" action="/skate_spots/<%=@skate_spot.id%>">
+    <input type="hidden" id="hidden" name="_method" value="PATCH"/>
+    <input type="text" id="name" name="name" value="<%=@skate_spot.name%> "/>
+    <input type="text" id="location" name="location" value="<%=@skate_spot.location%>"/>
+    <input type="text" id="heat_index" name="heat_index" value="<%=@skate_spot.heat_index%>"/>
+    <input type="text" id="skill_level" name="skill_level" value="<%=@skate_spot.skill_level%>"/>
+    <textarea type="text" id="description" name="description"><%=@skate_spot.description%></textarea>
+    <input type="submit" value="submit"/>
+</form>
