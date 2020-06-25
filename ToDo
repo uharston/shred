@@ -5,7 +5,10 @@ X-> A user is able to create a skatespot
 X-> A user is able to see an individual spot 
 X-> A user is able to update their skatespots 
 X-> A user is able to delete their skatespots 
--> Finalize SkateSpot attributes
+X-> Finalize SkateSpot attributes
+X-> A user in not able to sign up with a duplicate or blank username/email
+-> A user will see validation failure messages when appropiate 
+-> A user has to confirm password when signing up  
 
 2nd Level - Functionality
 -> A user is able to browse skatespots for just their city 
