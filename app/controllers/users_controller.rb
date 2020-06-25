@@ -8,14 +8,13 @@ class UsersController < ApplicationController
     end
   end 
 
-  post '/signup' do 
-    binding.pry
-    if blank_input? || duplicate_username? || duplicate_email?
-      redirect to "/signup"
-    else 
-      user = User.create(params)
+  post '/signup' do
+    user = User.create(params)
+    if user.save
       session[:user_id] = user.id 
       redirect to '/skate_spots'
+    else 
+      redirect '/signup'
     end 
   end 
 
