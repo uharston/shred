@@ -5,7 +5,7 @@ X-> A user is able to create a skatespot
 X-> A user is able to see an individual spot 
 X-> A user is able to update their skatespots 
 X-> A user is able to delete their skatespots 
-X-> Finalize SkateSpot attributes
+-> Finalize SkateSpot attributes
 
 2nd Level - Functionality
 -> A user is able to browse skatespots for just their city 
@@ -26,5 +26,15 @@ Question for Jenn
 -> Feedback on how file structure and RESTFUL routes 
 -> Ask about 2nd Level features 
 -> How to add Google Maps? 
+
+<form method="post" action="/skate_spots/<%=@skate_spot.id%>">
+    <input type="hidden" id="hidden" name="_method" value="PATCH"/>
+    <input type="text" id="name" name="name" value="<%=@skate_spot.name%> "/>
+    <input type="text" id="location" name="location" value="<%=@skate_spot.location%>"/>
+    <input type="text" id="heat_index" name="heat_index" value="<%=@skate_spot.heat_index%>"/>
+    <input type="text" id="skill_level" name="skill_level" value="<%=@skate_spot.skill_level%>"/>
+    <textarea type="text" id="description" name="description"><%=@skate_spot.description%></textarea>
+    <input type="submit" value="submit"/>
+</form>
 
 
