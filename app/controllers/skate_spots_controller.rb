@@ -18,14 +18,22 @@ class SkateSpotsController < ApplicationController
         end 
     end
 
+
+
     post '/skate_spots' do 
         if logged_in? 
-            @skate_spot = current_user.skate_spots.build(params)
-            if @skate_spot.save 
+            binding.pry
+            if correct_input?
+                @skate_spot = current_user.skate_spots.build(params)
+                if @skate_spot.save
+                    redirect '/skate_spots'
+                else
+                    redirect '/'
+                end
+            else 
                 redirect '/skate_spots'
-            else
-                redirect '/'
             end
+        else
             redirect '/login'
         end 
     end 
@@ -44,8 +52,6 @@ class SkateSpotsController < ApplicationController
     end 
   end
 
-  # GET: /users/5/edit
-
 
 
   get "/skate_spots/:id/edit" do
@@ -63,13 +69,17 @@ class SkateSpotsController < ApplicationController
 
   # PATCH: /users/5
   patch "/skate_spots/:id" do
-    if logged_in? 
-        @skate_spot = SkateSpot.find_by_id(params[:id])
-        if @skate_spot && @skate_spot.user == current_user 
-            @skate_spot.update(name: params[:name], location: params[:location], heat_index: params[:heat_index], skill_level: params[:skill_level], description: params[:description])
-          redirect "/skate_spots/#{params[:id]}"
+    if logged_in?
+        if correct_input?
+            @skate_spot = SkateSpot.find_by_id(params[:id])
+            if @skate_spot && @skate_spot.user == current_user 
+                @skate_spot.update(name: params[:name], location: params[:location], heat_index: params[:heat_index], skill_level: params[:skill_level], description: params[:description])
+                redirect "/skate_spots/#{params[:id]}"
+            else
+                redirect "/skate_spots/#{params[:id]}"
+            end
         else
-          redirect "/skate_spots/#{params[:id]}"  
+            redirect "/skate_spots/#{params[:id]}/edit" 
         end
     end 
     redirect "/skate_spots/#{params[:id]}" 
