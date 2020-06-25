@@ -1,0 +1,20 @@
+<h1><%=@user.username%>'s Spots</h1>
+
+
+
+<%@user.skate_spots.each do |spot| %>
+    <br>
+    <h3><%= spot.name%></h3>
+    <p>
+    <%= spot.location%><br>
+    <%= spot.heat_index%><br>
+    <%= spot.skill_level%><br>
+    <%= spot.description%></p>
+    
+       <%if @user == current_user %>
+
+        <a href="/skate_spots/<%=spot.id%>/edit">Update</a>
+        <br><br>
+    <%end%>
+    <hr>
+<% end %>

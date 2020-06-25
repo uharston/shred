@@ -5,8 +5,8 @@
 <br><br><hr>
 <%@skate_spots.each do |spot| %>
     <br>
-    <a href='/skate_spots/<%=spot.id%>'><h3><%= spot.name%></h3></a>
-
+    <a href='/skate_spots/<%=spot.id%>' class="skate_spot_title"><h3><%= spot.name%></a>
+    <span> - <a href="/users/<%=spot.user.id%>"><%=spot.user.username%></a> </span></h3>
     <p>
     <%= spot.location%><br>
     <%= spot.heat_index%><br>

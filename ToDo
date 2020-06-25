@@ -4,7 +4,8 @@ X-> A user is able to see all of the skatespots from all the users on the index 
 X-> A user is able to create a skatespot 
 X-> A user is able to see an individual spot 
 X-> A user is able to update their skatespots 
--> A user is able to delete their skatespots 
+X-> A user is able to delete their skatespots 
+X-> Finalize SkateSpot attributes
 
 2nd Level - Functionality
 -> A user is able to browse skatespots for just their city 

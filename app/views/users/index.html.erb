@@ -3,7 +3,7 @@
 
 
 
-<%current_user.skate_spots.each do |spot| %>
+<%@user.skate_spots.each do |spot| %>
     <br>
     <p><%= spot.name%><br>
     <%= spot.location%><br>
