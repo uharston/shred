@@ -16,6 +16,7 @@ class SessionsController < ApplicationController
         else 
             redirect to '/login'
         end
+
     end 
 
     get '/logout' do 

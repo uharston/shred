@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   post '/signup' do 
     binding.pry
-    if blank_input?
+    if blank_input? || duplicate_username? || duplicate_email?
       redirect to "/signup"
     else 
       user = User.create(params)
