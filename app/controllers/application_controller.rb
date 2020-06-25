@@ -34,5 +34,15 @@ class ApplicationController < Sinatra::Base
       end 
     end 
 
+    def blank_input? 
+       !!(params[:username].blank? || params[:email].blank? || params[:password].blank?) 
+    end 
+
+    # def duplicate_input? 
+    #   username =  !!User.find_by(username: params[:username])
+    #   email =  !!User.find_by(username: params[:email])
+        
+    # end 
+
   end 
 end

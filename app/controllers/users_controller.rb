@@ -9,7 +9,8 @@ class UsersController < ApplicationController
   end 
 
   post '/signup' do 
-    if params[:username] == "" || params[:email] == "" || params[:password] == ""
+    binding.pry
+    if blank_input?
       redirect to "/signup"
     else 
       user = User.create(params)
