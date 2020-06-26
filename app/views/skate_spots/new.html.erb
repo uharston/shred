@@ -1,7 +1,9 @@
 <div class="w3-bar  w3-black">
 
+ <a href="/skate_spots" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-left"><img src="/images/Primo-logo-white-simple.png" alt="LOGO" width="77" height="25" id="img-logo"></a>
+    <a href="/logout" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Log Out</a>
+    <a href='/users/<%=current_user.id%>' class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Profile</a>
 
-  <a href="/logout" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Log Out</a>
 
 </div>
 
@@ -29,7 +31,7 @@
     <label class="w3-left" for="skill_level">Skill Level:</label>
     <select id="skill_level" class="w3-input w3-border" name="skill_level">
         <option value="Beginner">Beginnner</option>
-        <option value="Amatuer">Amatuer</option>
+        <option value="Amateur">Amateur</option>
         <option value="Professional">Professional</option>
         <option value="Any Skill Level">Any Skill Level</option>
     </select><br>
@@ -37,7 +39,7 @@
      <label class="w3-left" for="description">Why is this spot cool?:</label>
     <input type="text" class="w3-input w3-border" id="description" name="description" /><br>
     
-    <input type="submit" value="submit"/>
+    <input type="submit" value="Submit"/>
 
 </form>
 
