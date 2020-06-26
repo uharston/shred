@@ -12,16 +12,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="/stylesheets/main.css" />
-  </head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+     </head>
+    <style>
+      body,h1 {font-family: "Raleway", sans-serif}
+      body, html {height: 100%}
+      .bgimg {
+        background-image: url('/images/skater_lipslide.jpg');
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+        }
+        </style>
   <body>
-    <div class="wrapper">
 
-        <%= yield %>
 
-      <footer class="branding">
-        <small>&copy; 2020 <strong>Shred</strong></small>
-      </footer>
-    </div>
+
+      <%=yield%>
+
+  <div class="w3-display-bottomleft w3-padding-large">
+    2020 Primo
+  </div>
+</div>
+
+
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <!--[if lt IE 7]>
@@ -30,3 +45,15 @@
     <![endif]-->
   </body>
 </html>
+
+
+    <%# <div class="wrapper">
+  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-middle">
+        <%= yield %>
+<%# </div>
+      <footer class="branding">
+        <small>&copy; 2020 <strong>Shred</strong></small>
+      </footer>
+    </div>
+    <%# </div> %> 

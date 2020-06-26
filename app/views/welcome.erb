@@ -1,9 +1,15 @@
+      <div class="w3-bar  w3-black">
+  <%if logged_in?%>
+  <a href="/logout" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Log Out</a>
+  <%else%>
+  <a href="/login" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Log In</a>
+  <a href="/signup" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Create Account</a>
+  <%end%>
+</div>
+    
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-middle">
+  <div class="w3-animate-top"><img src="images/Primo-logo-white.png" alt="LOGO" width="770" height="452" id="img-logo"></div>
 
-<h1>Shred</h1>
-<h2>Local skate spots</h2>
-
-<a href="/signup">Sign Up</a>
-<a href="/login">Log In</a>
-<a href="/logout">Log Out</a>
-
-<p> Does my branch work?? </p>
+<%# <a href="/logout">Log Out</a> %>
+  </div>
