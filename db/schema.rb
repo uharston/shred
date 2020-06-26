@@ -15,7 +15,8 @@ ActiveRecord::Schema.define(version: 20200624180619) do
 
   create_table "skate_spots", force: :cascade do |t|
     t.string   "name"
-    t.string   "location"
+    t.string   "cross_street1"
+    t.string   "cross_street2"
     t.string   "heat_index"
     t.string   "skill_level"
     t.text     "description"

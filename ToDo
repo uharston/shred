@@ -136,4 +136,6 @@ Question for Jenn
 
 <%# <img src="images/Primo-logo-white.png" alt="LOGO" width="770" height="452" id="img-logo"> %>
 
+<div class="w3-card-4 w3-light-grey w3-center w3-hover-shadow" style="max-width: 500px; margin:auto; margin-top: 80px; background: white; padding: 20px;">
+
 
