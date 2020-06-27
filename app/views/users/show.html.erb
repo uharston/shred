@@ -1,38 +1,31 @@
+<!-- NAVIGATION -->
 <div class="w3-bar w3-black w3-right">
-
     <a href="/skate_spots" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-left"><img src="/images/Primo-logo-white-simple.png" alt="LOGO" width="77" height="25" id="img-logo"></a>
     <a href="/logout" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Log Out</a>
+    <a href='/users/<%=current_user.id%>/password' class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Change Password</a>
     <a href='/skate_spots/new' class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Add spot</a>
-    
-
-
 </div>
 
+<!-- TITLE -->
 <div class="w3-container w3-center">
-<h1 class="w3-jumbo"><%=@user.username%>'s Spots</h1>
-<hr class="w3-border-grey" style="margin:auto;width:40%"><br>
+    <h1 class="w3-jumbo"><%=@user.username%>'s Spots</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%"><br>
 </div>
 
-
-
-
+<!-- SKATE SPOT CARD -->
 <div class="w3-row-padding">
-<%@user.skate_spots.each do |spot| %>
-    <div class="w3-third w3-margin-bottom">
-      <div class="w3-card-4">
-        <div class="w3-container">
-
-    <h3><a href="/skate_spots/<%=spot.id%>"><%= spot.name%></a></h3>
-    <p>
-    <%= spot.location%><br>
-    <%= spot.heat_index%><br>
-    <%= spot.skill_level%><br>
-    <%= spot.description%></p>
-    
-</div></div>
-       </div>
-<% end %>
-
-
-
- </div>
+    <%@user.skate_spots.each do |spot| %>
+        <div class="w3-third w3-margin-bottom">
+            <div class="w3-card-4">
+                <div class="w3-container">
+                    <h3><a href="/skate_spots/<%=spot.id%>"><%= spot.name%></a></h3>
+                    <p><%= spot.location%><br>
+                        <%= spot.heat_index%><br>
+                        <%= spot.skill_level%><br>
+                        <%= spot.description%>
+                    </p>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
