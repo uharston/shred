@@ -18,7 +18,7 @@
 
     <div class="mapouter">
     <div class="gmap_canvas">
-    <iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=<%=@skate_spot.cross_street1%>%20%26%20<%=@skate_spot.cross_street1%>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    <iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=<%=@skate_spot.location%>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
     </div>
     <div class="w3-left w3-medium"><strong>Location: </strong><%= @skate_spot.location%></div><br>
     <div class="w3-left w3-medium"><strong>Security Level: </strong><%= @skate_spot.heat_index%></div><br>
@@ -38,6 +38,8 @@
  
 
   </div>
+
+  "https://maps.google.com/maps?q=juan tabo and lomas&t=&z=13&ie=UTF8&iwloc=&output=embed"
 
  
 

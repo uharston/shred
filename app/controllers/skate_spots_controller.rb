@@ -20,6 +20,7 @@ class SkateSpotsController < ApplicationController
     
     
     post '/skate_spots' do 
+      
         if logged_in? 
             if correct_input?
                 @skate_spot = current_user.skate_spots.build(params)

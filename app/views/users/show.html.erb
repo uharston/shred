@@ -18,8 +18,10 @@
 
 <div class="w3-row-padding">
 <%@user.skate_spots.each do |spot| %>
-    <div class="w3-col s4 w3-margin-top">
-    <br>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <div class="w3-container">
+
     <h3><a href="/skate_spots/<%=spot.id%>"><%= spot.name%></a></h3>
     <p>
     <%= spot.location%><br>
@@ -27,7 +29,7 @@
     <%= spot.skill_level%><br>
     <%= spot.description%></p>
     
-
+</div></div>
        </div>
 <% end %>
 
