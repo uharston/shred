@@ -1,6 +1,7 @@
 class SkateSpotsController < ApplicationController
 
     get '/skate_spots' do
+       
         if logged_in?
             @current_user = current_user 
             @skate_spots = SkateSpot.all 
