@@ -21,16 +21,11 @@ class ApplicationController < Sinatra::Base
 
     def current_user 
       #look up memoization
-      @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
+      @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id])
     end
 
     def correct_input?
      !!(params[:heat_index] == "Chill" || params[:heat_index] == "Moderate" || params[:heat_index] == "Hot" || params[:heat_index] == "Red Hot") && !!(params[:skill_level] == "Beginner" || params[:skill_level] == "Amateur" || params[:skill_level] == "Professional" || params[:skill_level] == "Any Skill Level")
-          # true
-        # end 
-      # else
-      #   false
-      # end 
     end 
 
     # def blank_input? 
