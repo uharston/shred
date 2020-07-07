@@ -1,26 +1,38 @@
-<h1>Show Page</h1>
-   <%if @skate_spot.user == current_user %>
-        <form method="post" action="/skate_spots/<%=@skate_spot.id%>/delete">
-            <input id="hidden" type="hidden" name="_method" value="DELETE">
-             <input type="submit" value="Delete">
-        </form>
-        <a href="/skate_spots/<%=@skate_spot.id%>/edit">Update</a>
-        <br><br>
-    <%end%>
+<!-- NAVIGATION -->
+<div class="w3-bar  w3-black">
+    <a href="/skate_spots" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-left"><img src="/images/Primo-logo-white-simple.png" alt="LOGO" width="77" height="25" id="img-logo"></a>
+    <a href="/logout" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Log Out</a>
+    <a href='/skate_spots/new' class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Add spot</a>
+    <a href='/users/<%=current_user.id%>' class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Profile</a>
+</div>
 
-    <hr><br>
-    <strong><%= @skate_spot.name%></strong> 
-    
-    <br>
-    <%= @skate_spot.location%><br>
-    <%= @skate_spot.heat_index%><br>
-    <%= @skate_spot.skill_level%><br>
-    <%= @skate_spot.description%></p>
+<!-- HEADING -->
+<div class="w3-container w3-center">
+    <h1 class="w3-xxxlarge"><%=@skate_spot.name%></h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+</div>
+
+<!-- SKATE SPOT CARD -->
+<div class="w3-card-4 w3-light-grey w3-center w3-hover-shadow" style="max-width: 500px; margin:auto; margin-top: 30px; background: white; padding: 20px;">
+    <div class="mapouter">
+        <div class="gmap_canvas">
+            <iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=<%=@skate_spot.location%>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
+        <div class="w3-left w3-medium"><strong>Location: </strong><%= @skate_spot.location%></div><br>
+        <div class="w3-left w3-medium"><strong>Security Level: </strong><%= @skate_spot.heat_index%></div><br>
+        <div class="w3-left w3-medium"><strong>Skill Level: </strong><%= @skate_spot.skill_level%></div><br>
+        <div class="w3-left w3-medium"><strong>Description: </strong><%= @skate_spot.description%></div><br>
+        <%if @skate_spot.user == current_user %><br>
+            <button class="w3-right"> <a  href="/skate_spots/<%=@skate_spot.id%>/delete">Delete</a></button>
+            <button class="w3-left"> <a  href="/skate_spots/<%=@skate_spot.id%>/edit">Update</a></button><br>
+        <%end%>
+    </div>
+</div>
 
  
 
-    <hr>
-    <br>
 
-<a href="/logout">Log Out</a>
+
+
+
 

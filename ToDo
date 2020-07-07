@@ -5,7 +5,10 @@ X-> A user is able to create a skatespot
 X-> A user is able to see an individual spot 
 X-> A user is able to update their skatespots 
 X-> A user is able to delete their skatespots 
--> Finalize SkateSpot attributes
+X-> Finalize SkateSpot attributes
+X-> A user in not able to sign up with a duplicate or blank username/email
+-> A user will see validation failure messages when appropiate 
+-> A user has to confirm password when signing up  
 
 2nd Level - Functionality
 -> A user is able to browse skatespots for just their city 
@@ -26,15 +29,113 @@ Question for Jenn
 -> Feedback on how file structure and RESTFUL routes 
 -> Ask about 2nd Level features 
 -> How to add Google Maps? 
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 
-<form method="post" action="/skate_spots/<%=@skate_spot.id%>">
-    <input type="hidden" id="hidden" name="_method" value="PATCH"/>
-    <input type="text" id="name" name="name" value="<%=@skate_spot.name%> "/>
-    <input type="text" id="location" name="location" value="<%=@skate_spot.location%>"/>
-    <input type="text" id="heat_index" name="heat_index" value="<%=@skate_spot.heat_index%>"/>
-    <input type="text" id="skill_level" name="skill_level" value="<%=@skate_spot.skill_level%>"/>
-    <textarea type="text" id="description" name="description"><%=@skate_spot.description%></textarea>
-    <input type="submit" value="submit"/>
-</form>
+    <title>Shred</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+
+        <%= yield %>
+
+      <footer class="branding">
+        <small>&copy; 2020 <strong>Shred</strong></small>
+      </footer>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!--[if lt IE 7]>
+      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+      <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+    <![endif]-->
+  </body>
+</html>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <title>Shred</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+     </head>
+    <style>
+      body,h1 {font-family: "Raleway", sans-serif}
+      body, html {height: 100%}
+      .bgimg {
+        background-image: url('/images/skater_lipslide.jpg');
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+        }
+        </style>
+  
+ 
+  <body>
+
+<%yield%>
+  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-middle">
+  <div class="w3-animate-top"><img src="images/Primo-logo-white.png" alt="LOGO" width="770" height="452" id="img-logo"></div>
+    <%# <div style="font-size:150px;"class="w3-animate-top">Primo</div> %>
+    <%# <hr class="w3-border-grey" style="margin:auto;width:40%"> %>
+    <%# <p class="w3-large w3-center">Local Skate Spots</p> %>
+    <a href="/signup">Sign Up</a>
+<a href="/login">Log In</a>
+<a href="/logout">Log Out</a>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    2020 Primo
+  </div>
+</div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!--[if lt IE 7]>
+      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+      <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+    <![endif]-->
+  </body>
+</html>
+
+<%# <img src="images/Primo-logo-white.png" alt="LOGO" width="770" height="452" id="img-logo"> %>
+
+<div class="w3-card-4 w3-light-grey w3-center w3-hover-shadow" style="max-width: 500px; margin:auto; margin-top: 80px; background: white; padding: 20px;">
 
 
