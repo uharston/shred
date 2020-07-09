@@ -21,19 +21,16 @@ class SkateSpotsController < ApplicationController
     
     
     post '/skate_spots' do 
-      
-        if logged_in? 
+        if logged_in?
             if correct_input?
                 @skate_spot = current_user.skate_spots.build(params)
                 if @skate_spot.save
                     redirect '/skate_spots'
-                else
-                    redirect '/'
-                end
-            else 
-                redirect '/skate_spots'
+                else 
+                    erb :'/skate_spots/new.html'
+                end 
             end
-        else
+        else 
             redirect '/login'
         end 
     end 
@@ -68,11 +65,19 @@ class SkateSpotsController < ApplicationController
     
     patch "/skate_spots/:id" do
         if logged_in?
+            
             if correct_input?
+                
                 @skate_spot = SkateSpot.find_by_id(params[:id])
                 if @skate_spot && @skate_spot.user == current_user 
+                    
                     @skate_spot.update(name: params[:name], location: params[:location], heat_index: params[:heat_index], skill_level: params[:skill_level], description: params[:description])
-                    redirect "/skate_spots/#{params[:id]}"
+                    if @skate_spot.save 
+                        redirect "/skate_spots/#{params[:id]}"
+                    else 
+                        erb :"/skate_spots/edit.html"
+                    end 
+                    
                 else
                     redirect "/skate_spots/#{params[:id]}"
                 end

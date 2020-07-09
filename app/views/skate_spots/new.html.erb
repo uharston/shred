@@ -9,6 +9,7 @@
 <div class="w3-card-4 w3-light-grey w3-center" style="max-width: 500px; margin:auto; margin-top: 35px; background: white; padding: 10px;">
     <div class="w3-container w3-center">
         <h3>Add A New Skate Spot</h3>
+         <h4><%= "Fill out all fields" if @skate_spot && @skate_spot.errors.any? %></h4>
         <form method="POST" action="/skate_spots">
             <label class="w3-left" for="name">Name:</label>
             <input type="text" class="w3-input w3-border" id="name" name="name" /><br>
