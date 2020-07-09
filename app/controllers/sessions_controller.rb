@@ -8,17 +8,14 @@ class SessionsController < ApplicationController
         end 
     end 
 
-    post '/login' do 
-        binding.pry 
+    post '/login' do
         @user = User.find_by(username: params[:username])
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id 
             redirect to "/skate_spots"
-        else 
-            binding.pry 
+        else     
             erb :'/sessions/login.html'
         end
-
     end 
 
     get '/logout' do 
