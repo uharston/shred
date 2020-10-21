@@ -10,6 +10,7 @@
 <div class="w3-card-4 w3-light-grey w3-center" style="max-width: 500px; margin:auto; margin-top: 35px; background: white; padding: 10px;">
     <div class="w3-container w3-center">
         <h3>Update This Skate Spot</h3>
+         <h4><%= "Fill out all fields" if @skate_spot && @skate_spot.errors.any? %></h4>
         <form method="post" action="/skate_spots/<%=@skate_spot.id%>">
             <input type="hidden" id="hidden" name="_method" value="PATCH"/>
             <label class="w3-left" for="name">Name:</label>
