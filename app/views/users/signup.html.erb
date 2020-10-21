@@ -8,6 +8,7 @@
 <div class="w3-card-4 w3-dark-grey w3-center" style="max-width: 500px; margin:auto; margin-top: 80px; background: white; padding: 10px;">
   <div class="w3-container w3-center">
     <h3>Join The Primo Society</h3>
+     <h4><%= "Fill out all fields" if @user && @user.errors.any? %></h4>
     <form method="POST" action="/signup">
       <label class="w3-left">Username</label><br>
       <input type="text" class="w3-input w3-border" id="username" name="username" /><br>

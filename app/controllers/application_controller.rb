@@ -24,27 +24,13 @@ class ApplicationController < Sinatra::Base
       @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
     end
 
-    def correct_input?
-      if params[:heat_index] == "Chill" || params[:heat_index] == "Moderate" || params[:heat_index] == "Hot" || params[:heat_index] == "Red Hot"
-        if params[:skill_level] == "Beginner" || params[:skill_level] == "Amateur" || params[:skill_level] == "Professional" || params[:skill_level] == "Any Skill Level"
-          true
-        end 
-      else
-        false
+
+    def redirect_if_not_logged_in
+      if !logged_in? 
+        redirect '/login'
       end 
     end 
 
-    # def blank_input? 
-    #    !!(params[:username].blank? || params[:email].blank? || params[:password].blank?) 
-    # end 
-
-    # def duplicate_username?
-    #   !!User.find_by(username: params[:username].strip)
-    # end 
-
-    # def duplicate_email? 
-    #   !!User.find_by(username: params[:email].strip)
-    # end 
-
   end 
+  
 end
