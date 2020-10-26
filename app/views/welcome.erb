@@ -1,7 +1,7 @@
 <!-- NAVIGATION -->
 <div class="w3-bar  w3-black">
   <%if logged_in?%>
-    <a href="/skate_spots" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-left"><img src="/images/Primo-logo-white-simple.png" alt="LOGO" width="77" height="25" id="img-logo"></a>
+    <a href="/skate_spots" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-left"><img src="/images/Primo-logo-white-simple.png" alt="LOGO" id="nav-logo"></a>
     <a href="/logout" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Log Out</a>
   <%else%>
     <a href="/login" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-right">Log In</a>
@@ -10,9 +10,9 @@
 </div>
 
 <!-- BACKGROUND PICTURE -->
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-middle">
-    <div class="w3-animate-top"><img src="images/Primo-logo-white.png" alt="LOGO" width="770" height="452" id="img-logo">
+  <div class="bgimg w3-animate-opacity w3-text-white">
+    <div class="w3-display-middle">
+      <div class="w3-animate-top"><img id="img-logo" src="images/Primo-logo-white.png" alt="LOGO" >
+      </div>
     </div>
   </div>
-</div>
