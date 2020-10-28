@@ -17,7 +17,7 @@ set :database_file, "./database.yml"
 
 # set :database, database_config
 
-# require 'rack-flash'
+require 'rack-flash'
 
 require_relative '../app/controllers/application_controller.rb'
 require_all 'app'

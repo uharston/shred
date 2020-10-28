@@ -1,18 +1,24 @@
 source 'http://rubygems.org'
 ruby '2.6.6'
 gem 'sinatra'
+gem 'rack-flash3'
 gem 'activerecord', '~> 4.2', '>= 4.2.6', :require => 'active_record'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'rake'
 gem 'require_all' 
-gem 'sqlite3', :group => :development
-gem 'pg', '0.15', :group => :production
+gem 'pg', '0.20', :group => :production
 gem 'thin'
-gem 'shotgun'
 gem 'dotenv'
-gem 'pry'
+
 gem 'bcrypt'
-gem 'tux'
+
+
+group :development do
+  gem 'tux'
+  gem 'pry'
+  gem 'shotgun'
+  gem 'sqlite3'
+end 
 
 group :test do
   gem 'rspec'
