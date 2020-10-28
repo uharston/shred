@@ -9,7 +9,7 @@ gem 'require_all'
 gem 'pg', '0.20', :group => :production
 gem 'thin'
 gem 'dotenv'
-
+gem 'sqlite3', '~> 1.3.6'
 gem 'bcrypt'
 
 
@@ -17,7 +17,7 @@ group :development do
   gem 'tux'
   gem 'pry'
   gem 'shotgun'
-  gem 'sqlite3'
+  # gem 'sqlite3'
 end 
 
 group :test do
