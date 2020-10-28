@@ -9,6 +9,7 @@ gem 'sqlite3', :group => :development
 gem 'pg', '0.15', :group => :production
 gem 'thin'
 gem 'shotgun'
+gem 'dotenv'
 gem 'pry'
 gem 'bcrypt'
 gem 'tux'
