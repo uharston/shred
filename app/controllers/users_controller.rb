@@ -9,7 +9,12 @@ class UsersController < ApplicationController
   end 
 
   post '/signup' do
-    @user = User.create(params)
+    user = {}
+    params.each do |k, v| 
+      user[k] = v.strip
+    end
+    
+    @user = User.create(user)
     if @user.save
       session[:user_id] = @user.id 
       redirect to '/skate_spots'

@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     end 
 
     post '/login' do
-        @user = User.find_by(username: params[:username])
+        @user = User.find_by(username: params[:username].strip)
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id 
             redirect to "/skate_spots"
