@@ -98,6 +98,7 @@ GEM
     sinatra-activerecord (2.0.21)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
+    sqlite3 (1.4.2)
     thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -122,7 +123,7 @@ DEPENDENCIES
   bcrypt
   capybara
   database_cleaner!
-  pg (~> 0.21.0)
+  pg
   pry
   rack-test
   rake
@@ -131,6 +132,7 @@ DEPENDENCIES
   shotgun
   sinatra
   sinatra-activerecord
+  sqlite3
   thin
   tux
 
