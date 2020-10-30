@@ -1,14 +1,13 @@
-body,
+/* body,
 html {
-  background-color: red;
-  background: url('https://www.thrashermagazine.com/imagesV2/Features/2010/LeoMagInterview_Web/1500kickflip.jpg') no-repeat center center fixed; 
+  background-color: white;
 }
 
 
-  .center {
+  /* .center {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     border: 3px solid green; 
-  }
+  } */ 
