@@ -13,7 +13,8 @@ class SessionsController < ApplicationController
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id 
             redirect to "/skate_spots"
-        else     
+        else  
+            @user = {invalid_credentials: true }  
             erb :'/sessions/login.html'
         end
     end 

@@ -10,13 +10,13 @@
       <div class="w3-container w3-center">
         <h3>Join The Primo Society</h3>
         <form method="POST" action="/signup">
-          <label class="w3-left">Username  <span class='error-message'><%= @user.errors.messages[:username][0] if @user.errors.messages[:username] %></span></label><br>
+          <label class="w3-left">Username  <span class='error-message'><%= @user.errors.messages[:username][0] if @user && @user.errors.messages[:username] %></span></label><br>
           <input type="text" class="w3-input w3-border" id="username" name="username" /><br>
-          <label class="w3-left">Email <span class='error-message'><%= @user.errors.messages[:email][0] if @user.errors.messages[:email] %></span></label><br>
+          <label class="w3-left">Email <span class='error-message'><%= @user.errors.messages[:email][0] if @user && @user.errors.messages[:email] %></span></label><br>
           <input type="email" class="w3-input w3-border" id="email" name="email" /><br>
-          <label class="w3-left">Password <span class='error-message'><%= @user.errors.messages[:password][0] if @user.errors.messages[:password] %></span></label><br>
+          <label class="w3-left">Password <span class='error-message'><%= @user.errors.messages[:password][0] if @user && @user.errors.messages[:password] %></span></label><br>
           <input type="password" class="w3-input w3-border" id="password" name="password" /><br>
-          <label class="w3-left">Confirm Password <span class='error-message'><%= @user.errors.messages[:password_confirmation][0] if @user.errors.messages[:password_confirmation] %></span></label><br>
+          <label class="w3-left">Confirm Password <span class='error-message'><%= @user.errors.messages[:password_confirmation][0] if @user && @user.errors.messages[:password_confirmation] %></span></label><br>
           <input type="password" class="w3-input w3-border" id="password" name="password_confirmation" /><br>
           <input type="submit" value="Sign Up"/>
         </form>
