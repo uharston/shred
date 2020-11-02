@@ -76,6 +76,7 @@ class SkateSpotsController < ApplicationController
         set_skate_spot
         if @skate_spot && @skate_spot.user == current_user
            @skate_spot.delete
+           redirect to '/skate_spots'
         else
             redirect to '/skate_spots'
         end 
