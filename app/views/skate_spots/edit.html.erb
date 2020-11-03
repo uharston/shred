@@ -1,3 +1,5 @@
+<div class="background-image-5">
+
 <!-- NAVIGATION -->
 <div class="topnav" id="myTopnav">
   <!-- <%# <a href="#home" class="active">Home</a> %> -->
@@ -13,8 +15,8 @@
 </div>
 
 <!-- EDIT FORM -->
-<div style='min-height: 80vh'>
-  <div class="w3-card-4 w3-light-grey w3-center" style="max-width: 500px; margin:auto; margin-top: 35px; background: white; padding: 10px;">
+<div class="content-wrapper">
+  <div class="form-card w3-card-4 w3-light-grey w3-center" >
       <div class="w3-container w3-center">
           <h3>Update This Skate Spot</h3>
           <h4><%= "Fill out all fields" if @skate_spot && @skate_spot.errors.any? %></h4>
@@ -48,5 +50,7 @@
 
 <!-- FOOTER -->
   <div class="alt-footer" >
-  <p class="">Made 💯 by <a href="https://harstondev.web.app/">Uriah Harston</a></p>
+    <p class="" style="color: white;">Made 💯 by <a href="https://harstondev.web.app/">Uriah Harston</a></p>
+  </div>
+
 </div>
