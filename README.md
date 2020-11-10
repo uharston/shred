@@ -2,14 +2,18 @@
 
 An application that is designed to connect skaters to local skate spots around the world. 
 
-# Prerequisites
+# Getting Started 
 
-You must be running Ruby 2.6.1. One way to accomplish this is to use [Ruby Version Manger(rvm)](https://rvm.io/rvm/install)
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+## Prerequisites
+
+You must be running Ruby 2.6.1. One way to accomplish this is to use [Ruby Version Manger(rvm)](https://rvm.io/rvm/install).
 
     rvm install "ruby-2.6.1"
     rvm use 2.6.1
 
-# Installation 
+## Installation 
 
 Fork and clone the repository using your prefered method. 
 
@@ -23,15 +27,31 @@ Create a development database
 
     $ rake db:migrate 
 
-Test out locally using `rackup` or `shotgun` servers
+Start local server using `rackup` or `shotgun`
 
     $ rackup 
 
     $ shotgun 
 
+Use you favorite web browser to navigate to the localhost link printed in the terminal.
+
+# Tech Stack Used 
+
+    - Ruby 2.6.1 
+    - Bundler 
+    - HTML5
+    - CSS3
+    - w3.css
+    - Sinatra
+    - Sqlite - Development Database
+    - Postgres - Production Database 
+    - Heroku - Deployment Service 
+
 # Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Contributions are always welcome!
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests.
 
 # License
 
