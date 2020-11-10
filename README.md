@@ -2,7 +2,7 @@
 
 An application that is designed to connect skaters to local skate spots around the world 🌎. 
 
-[🛹 Click here 🛹](https://primospots.herokuapp.com) to go to the live build!
+🛹 [Click here] 🛹(https://primospots.herokuapp.com) to go to the live build.
 
 # Getting Started 
 
@@ -51,7 +51,7 @@ Use you favorite web browser to navigate to the localhost link printed in the te
 
 # Contributing
 
-Contributions are always welcome!
+Contributions are always welcome.
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests.
 
