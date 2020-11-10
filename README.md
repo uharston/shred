@@ -1,8 +1,8 @@
 ![Primo Logo](./public/images/Primo-logo-black(1).png)
 
-An application that is designed to connect skaters to local skate spots around the world. 
+An application that is designed to connect skaters to local skate spots around the world 🌎. 
 
-[Click here](https://primospots.herokuapp.com) to go to the live build!
+[🛹 Click here 🛹](https://primospots.herokuapp.com) to go to the live build!
 
 # Getting Started 
 
