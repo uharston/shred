@@ -4,7 +4,7 @@ An application that is designed to connect skaters to local skate spots around t
 
 # Prerequisites
 
-You must be running Ruby 2.6.1. One way to accomplish this is to use [Ruby Version Manger(rvm)] https://rvm.io/rvm/install
+You must be running Ruby 2.6.1. One way to accomplish this is to use [Ruby Version Manger(rvm)](https://rvm.io/rvm/install)
 
     rvm install "ruby-2.6.1"
     rvm use 2.6.1
@@ -35,7 +35,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 # License
 
-This project is licensed under the [MIT] https://opensource.org/licenses/MIT License
+This project is licensed under the [MIT](https://opensource.org/licenses/MIT) License
 
 
 
