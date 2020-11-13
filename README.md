@@ -17,7 +17,7 @@ You must be running Ruby 2.6.1. One way to accomplish this is to use [Ruby Versi
 
 ## Installation 
 
-Fork and clone the repository using your prefered method. 
+Fork and clone the repository using your preferred method. 
 
 Then load all of the dependencies...
 
